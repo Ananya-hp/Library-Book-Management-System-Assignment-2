@@ -1,0 +1,42 @@
+📚Library Book Management System (Python)
+
+🧩Introduction
+ A Python console-based Library Book Management System that uses:
+ Singly Linked List → to store and manage book records
+ Stack (LIFO) → to record and undo issue/return transactions
+ The system supports inserting, deleting, issuing, returning, viewing, searching and undoing actions on books.
+
+⚙️ Data Structures Used
+Structure/Class    	Purpose
+Book(Node)   -  	 Stores single book record in Linked List
+BookList     -  	Implements Singly Linked List (insert/delete/search/display)
+Transaction	Stores -  one issue/return action with previous status
+TransactionStack   - 	Stack to perform Undo of transactions
+LibrarySystem	Driver class containing the menu and user operations
+
+📦 Core Functionalities
+1. Insert Book – Add a new book with unique Book ID
+2. Delete Book – Remove a book using ID
+3. Search Book – Find and display a specific book
+4. Issue Book – Change status to Issued and store transaction
+5. Return Book – Change status to Available and store transaction
+6. Undo Transaction – Restore previous status using stack
+7. View Transactions – Show all past issue/return actions
+8. Display All Books – Show all book records
+9. Exit – Exit from program
+
+⏱️ Time & Space Complexity
+Operation	         Time Complexity Space Usage
+Insert/Delete/Search	 O(n)          	O(n)
+Issue/Return	         O(n)         	O(n)
+Undo Transaction	  O(1)	        O(m)(stack size)
+Display Books            O(n)	          O(1)
+
+🧠 Error Handling / Validations
+- Prevents duplicate Book IDs during insert
+- Allows only valid numeric Book IDs
+- Avoids issuing already issued books
+- Avoids returning already available books
+- Prevents undo when no transaction exists
+- Shows user-friendly messages for invalid actions
+
